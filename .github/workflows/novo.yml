@@ -1,3 +1,5 @@
+name: Java CI with Maven and Release tags
+
 on:
   push:
     tags:
@@ -29,4 +31,4 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: target/*.jar
+        files: my-met-app/target/*.jar
